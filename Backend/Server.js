@@ -2,7 +2,7 @@ const dotenv=require("dotenv");
 const app=require("./App")
 const cloudinary=require("cloudinary");
 const connectdatabase =require("./config/database")
-
+const  path=require("path");
 
 //handle uncoughterror ex- youtube
 process.on("uncaughtException",(err)=>{
@@ -35,6 +35,14 @@ const PORT= 3000;
 const server=app.listen(PORT,()=>{
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+//EXTRA LINES 
+app.use(express.static(path.join(__dirname,"../Frontend/app/build")));
+
+app.get("*",(req,res)=>{
+res.sendFile(path.resolve(__dirname,"../Frontend/app/build/index.html"));
+});
+
+
 
 //unhandled error
 process.on("unhandledRejection",(err)=>{
