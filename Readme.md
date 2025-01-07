@@ -1,6 +1,6 @@
 # MERN E-COMMERCE TUTORIAL
 
-Hi! My name is **Sahil Namdeo**, I have created this tutorial to teach MERN Stack for free on YouTube.
+Hi! My name is **Sahil Namdeo**, I have created this  MERN Stack for free on YouTube.
 
 
 # Install Dependencies
